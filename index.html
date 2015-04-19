@@ -16,39 +16,83 @@
     
   <section class="parallax-background">
     <div class="intro-text">
-      Hi, I'm Brady.  
+      Hi, I'm Brady,
+    <h3> and this is a space for making connected things </h3>      
     </div>
+
 
     <div class="row">
       <div class="large-6 large-centered columns">
-        <ul class="button-group even-2">
-          <li <a href="#" class="button">see projects</a></li>
-          <li <a href="#" class="button alert">read about me</a></li>
-        </ul>
+      <div class="large-6 columns">
+                <a href="#portfolio" class="button expand alert round">see the projects</a>
+      </div>
+      <div class="large-6 columns">
+          <a href="#about-me" class="button expand round">read about me</a>\
+      </div>
       </div>
     </div>
   </section>
     
-  <section class="parallax-content">
-    <div class="row">
-      <div class= "large-8 columns about-content">
-          <link rel="import" href="http://localhost:81/about-me.html">
-        <p> I think we should use data well and make wonderful things. </p>
-        <p> I love to work with data, FPGAs, video streams, 
-        graphical programming languages, and my buddy's table saw. </p>
-        <p><a href="#" data-reveal-id="aboutMeModal" class="button">read more</a>     
-        <div id="aboutMeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-          <h2>about me</h2>
 
-
-          <a class="close-reveal-modal">&#215;</a>
+  <section class="parallax-slide" id="about-me">
+  <div class="row">
+    <div class= "large-8 columns about-content">
+      <p> I think we should use data well and make wonderful things. </p>
+      <p> I love to work with data, FPGAs, video streams, 
+      graphical programming languages, and my buddy's table saw. </p>
+      <div class="row">
+        <div class="large-2 columns">
+          <p><a href="#" data-reveal-id="aboutMeModal" class="button success">read more</a>     
+          <div id="aboutMeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+        </div>
+        <div class="large-2 columns end">
+          <p><a href="#" data-reveal-id="resumeModal" class="button">see my resume</a>     
+          <div id="resumeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
         </div>
       </div>
-      <div class="large-4 columns">
-        <img src="img/me.jpg">
-      </div>
     </div>
-   </section>
+    <div class="large-4 columns">
+      <img class="circular" src="img/me.png">
+    </div>
+  </div>
+  </section>
+
+  <section class="parallax-slide" id="featured-project">
+  <div class="row">
+    <div class="large-4 columns">
+      <img class="circular" src="img/sample-project-demo.jpg">
+    </div>
+    <div class= "large-8 columns about-content">
+      <h2> Live Lamp </h3>
+      <p> I think we should use data well and make wonderful things. </p>
+      <p> I love to work with data, FPGAs, video streams, 
+      graphical programming languages, and my buddy's table saw. </p>
+    </div>
+  </div>
+  </section>
+  
+  <section class="parallax-slide" id="banner-0">
+    <p> hello world </p>
+  </section>
+  
+  <section class="parallax-slide" id="featured-project">
+  <div class="row">
+    <div class="large-4 columns">
+      <img class="circular" src="img/sample-project-demo.jpg">
+    </div>
+    <div class= "large-8 columns about-content">
+      <h2> Live Lamp </h3>
+      <p> I think we should use data well and make wonderful things. </p>
+      <p> I love to work with data, FPGAs, video streams, 
+      graphical programming languages, and my buddy's table saw. </p>
+    </div>
+  </div>
+  </section>
+  
  
 <!--Import contents from external files--> 
   <script>

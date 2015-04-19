@@ -4,6 +4,10 @@ body {
 	font-size: 20px;
 }
 
+.center { margin: 0 auto; }
+.content{ margin: 0 auto; width: 960px; }
+.clear { clear: both; }
+
 .parallax-background {
   background:linear-gradient(rgba(32, 32, 32, 0.7), rgba(32, 32, 32, 0.7)), url("../img/hero.jpg");
 	height: 800px;
@@ -15,6 +19,11 @@ body {
   background-position: center center;
 	position: fixed;
 	width: 100%;
+}
+
+.parallax-background h3{
+  text-align: center;
+	color: #fff;
 }
 
 .parallax-background:after {
@@ -36,7 +45,7 @@ body {
 	margin-top: 15%;
   margin-bottom: 30px;
 }
-.parallax-content {
+.parallax-slide{
 	max-width: 100%;
 	position: relative;
 	top: 800px;
@@ -44,4 +53,17 @@ body {
 	font-size: 20px;
 	background-color: #fff;
 }
+
+#banner-0{
+    background:url('../img/hero_alt.jpg') 50% 0 no-repeat fixed;
+    color: #fff;
+    height: 600px;
+    margin: 0;
+    padding: 200px 0 260px 0;
+    background-size: cover;
+}
+
+#about-me: {background-color: #FFFFFF;}
+#featured-project{background-color: #F3F3F3;}
+#banner-0{background:linear-gradient(rgba(32, 32, 32, 0), rgba(32, 32, 32, 0)), url("../img/hero_alt.jpg");}
 
