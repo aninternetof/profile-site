@@ -1,69 +1,128 @@
-body {
-	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
-	font-weight: 200;
-	font-size: 20px;
-}
+/*
+Theme Name: Simple Parallax Website
+Description: Simple Parallax Scrolling Effect
+Author: Samuel Dalusung
+Modified: Brady Hurlburt
+*/
 
-.center { margin: 0 auto; }
-.content{ margin: 0 auto; width: 960px; }
-.clear { clear: both; }
+/*= GENERAL STYLING
+--------------------------------------------------------*/
 
-.parallax-background {
-  background:linear-gradient(rgba(32, 32, 32, 0.7), rgba(32, 32, 32, 0.7)), url("../img/hero.jpg");
-	height: 800px;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-	background-size: cover;
-  background-position: center center;
-	position: fixed;
+body{
+	margin: 0;
+	padding: 0;
 	width: 100%;
 }
 
-.parallax-background h3{
-  text-align: center;
-	color: #fff;
-}
-
-.parallax-background:after {
-    content: "";
-    background: url("../img/pattern.png") repeat;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-
-}
-
-.intro-text {
-	font-size: 50px;
-	color: #fff;
+h1 { 
+    font-family:"Arvo";
+	font-weight:normal;
+	font-size: 55px;
 	text-align: center;
-	margin-top: 15%;
-  margin-bottom: 30px;
+	color: #fff;
+	margin: 0;
+	padding: 0;
 }
-.parallax-slide{
-	max-width: 100%;
+
+.subtitle {
+   font-family:"Arvo";
+	font-weight:normal;
+	font-size: 24px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 10px 0 50px 0;
+}
+
+h2 {
+   font-family:"Arvo";
+   font-weight: normal;
+   font-size: 40px;
+   text-align: left;
+   color: #000;
+   margin: 0;
+	padding: 0;
+}
+
+h3 {
+   font-family: Oswald;
+   font-weight: normal;
+   font-size: 16px;
+   text-align: left;
+   margin: 5px 0;
+	padding: 0;
+	z-index: 1;
 	position: relative;
-	top: 800px;
-	padding: 50px;
-	font-size: 20px;
+}
+/*= PIECES STYLING
+--------------------------------------------------------*/
+
+.panel{
+   margin:0px 0 20px 0;
+   border:none;
+   background-color:#EAEAEA;
+}
+.portfolio-image {
+   margin: 10px 0px 10px 0;
+}
+
+.portfolio-image:hover{
+    opacity:0.5;
+}
+
+.light-background {
+}
+
+.dark-background img{
+   box-shadow:2px 2px 15px rgba(0,0,0,0.5);
+}
+.dark-background .panel{
+   box-shadow:2px 2px 15px rgba(0,0,0,0.5);
+}
+
+
+/*= SLIDES STYLING
+--------------------------------------------------------*/
+
+
+#hero{
+	background:linear-gradient(rgba(32, 32, 32, 0.7), rgba(32, 32, 32, 0.7)), url('../img/hero.jpg') 50% 0 no-repeat fixed;
+	color: #fff;
+	height: 1080px;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+}
+
+#about-me{
 	background-color: #fff;
+	color: #333333;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 100px 20px;
 }
 
-#banner-0{
-    background:url('../img/hero_alt.jpg') 50% 0 no-repeat fixed;
-    color: #fff;
-    height: 600px;
-    margin: 0;
-    padding: 200px 0 260px 0;
-    background-size: cover;
+#featured-project{
+	background: url(../img/banner-red.png) 50% 0 no-repeat fixed;
+	color: #fff;
+	padding: 60px 0 80px 0;	
+	background-size: cover;
 }
 
-#about-me: {background-color: #FFFFFF;}
-#featured-project{background-color: #F3F3F3;}
-#banner-0{background:linear-gradient(rgba(32, 32, 32, 0), rgba(32, 32, 32, 0)), url("../img/hero_alt.jpg");}
+#portfolio{
+	background-color: #fff;
+	color: #333333;
+	padding: 100px 0;
+}
 
+#footer{
+	background: url(../img/banner-blue.png) 50% 0 no-repeat fixed;
+	height: 200px;
+	margin: 0 auto;
+	padding: 250px 0;
+	color: #fff;
+	background-size: cover;
+}
+
+#copyright  { color: #FFF; font-family:"Wellfleet";  font-size: 14px; margin-top: 100px; text-align: center;  }
+#copyright  a { text-decoration: none; color: #555;  }

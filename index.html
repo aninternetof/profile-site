@@ -1,113 +1,207 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>an internet of ___</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/one-page.css" />
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="js/vendor/jquery.js"></script> 
-    <script src="js/foundation/foundation.js"></script> 
-    <script src="js/foundation/foundation.reveal.js"></script>
-    <!--Import external content files--> 
-    <link rel="import" href="http://localhost:81/about-me.html">
-  </head>
-    
-  <section class="parallax-background">
-    <div class="intro-text">
-      Hi, I'm Brady,
-    <h3> and this is a space for making connected things </h3>      
-    </div>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>an internet of ___</title>
+       <link rel="stylesheet" href="css/foundation.css" />
+       <link rel="stylesheet" href="css/one-page.css"/>
+      <script src="js/vendor/modernizr.js"></script>
+      <script src="js/vendor/jquery.js"></script> 
+      <script src="js/foundation/foundation.js"></script> 
+      <script src="js/foundation/foundation.reveal.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
 
 
-    <div class="row">
-      <div class="large-6 large-centered columns">
-      <div class="large-6 columns">
-                <a href="#portfolio" class="button expand alert round">see the projects</a>
-      </div>
-      <div class="large-6 columns">
-          <a href="#about-me" class="button expand round">read about me</a>\
-      </div>
-      </div>
-    </div>
-  </section>
-    
+</script>
 
-  <section class="parallax-slide" id="about-me">
-  <div class="row">
-    <div class= "large-8 columns about-content">
-      <p> I think we should use data well and make wonderful things. </p>
-      <p> I love to work with data, FPGAs, video streams, 
+
+ </head> 
+	
+<body>
+
+<!----- SLIDES START --->   	
+	<div id="hero">
+		<div>
+         <h1> Hi, I'm Brady, </h1>
+         <p class="subtitle"> and this is a space for creating connected things. </p>
+		</div>
+      <div class="row">
+         <div class="large-6 large-centered columns">
+            <div class="large-6 columns">
+               <a href="#featured-project" class="button expand alert round">see the projects</a>
+            </div>
+            <div class="large-6 columns">
+                <a href="#about-me" class="button expand round">read about me</a>
+            </div>
+         </div>
+      </div>
+    </div> 
+
+	<div class="light-background" id="about-me">
+   <div class="row"> 
+   <div class= "large-8 columns about-content">
+      <h3>I think we should use data well and make wonderful things. </h3>
+      <p>I love to work with data, FPGAs, video streams, 
       graphical programming languages, and my buddy's table saw. </p>
       <div class="row">
-        <div class="large-2 columns">
-          <p><a href="#" data-reveal-id="aboutMeModal" class="button success">read more</a>     
-          <div id="aboutMeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+         <div class="large-4 columns end">
+         <a href="#" data-reveal-id="aboutMeModal" class="button success round  small">read more</a>     
+         <div id="aboutMeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <div class= "large-8 columns about-content">
+               <h2>about me</h2>
+               <p>I work as an electrical engineer at a small electronic product
+               design firm in Indianapolis. We take ideas from napkin sketches 
+               to manufacturable products for everyone from tiny start-ups to 
+               massive corporations. </p>
+               <p>I live in downtown Indianapolis with my incredible wife Molly 
+               and our puppy. If you come visit us, we'll show you our favorite
+               hot sauce place. </p>
+            </div>
+            <div class="large-4 columns">
+               <img src="img/us.png">
+            </div>
             <a class="close-reveal-modal">&#215;</a>
-          </div>
-        </div>
-        <div class="large-2 columns end">
-          <p><a href="#" data-reveal-id="resumeModal" class="button">see my resume</a>     
-          <div id="resumeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-            <a class="close-reveal-modal">&#215;</a>
-          </div>
+         </div>
         </div>
       </div>
-    </div>
-    <div class="large-4 columns">
+      <p>I tweet about what I'm reading, what I'm building, and the most awesome stuff found on the web. If you want to learn more about my professional experience, there's options for that, too. </p>
+      <div class="row">
+        <div class="large-3 columns end">
+            <a href="https://twitter.com/aninternetof/with_replies" class="button round small">go to my Twitter</a></p> 
+        </div>
+         <div class="large-3 columns">
+         <a href="#" data-reveal-id="resumeModal" class="button round secondary small">see my resume</a>     
+         <div id="resumeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <div class= "large-8 columns about-content">
+               <h2>resume</h2>
+               <p>I work as an electrical engineer at a small electronic product
+               design firm in Indianapolis. We take ideas from napkin sketches 
+               to manufacturable products for everyone from tiny start-ups to 
+               massive corporations. </p>
+               <p>I live in downtown Indianapolis with my incredible wife Molly 
+               and our puppy. If you come visit us, we'll show you our favorite
+               hot sauce place. </p>
+            </div>
+            <div class="large-4 columns">
+               <img src="img/us.png">
+            </div>
+            <a class="close-reveal-modal">&#215;</a>
+         </div>
+        </div>
+        <div class="large-3 columns end">
+          <p><a href="https://www.linkedin.com/pub/brady-hurlburt/9a/6b4/964" class="button round secondary small">go to my LinkedIn</a>     
+        </div>
+      </div>
+   </div>
+   <div class="large-4 columns">
       <img class="circular" src="img/me.png">
+   </div>
+   </div> 
+   </div> 
+	
+	
+   <div class= "dark-background" id="featured-project">
+    <div class="row">
+      <div class="large-6 columns">
+        <img class="circular" src="img/sample-project-demo.jpg">
+      </div>
+      <div class= "large-6 columns about-content">
+         <div class="panel">
+           <h2> live lamp </h3>
+           <p> I think we should use data well and make wonderful things. </p>
+           <p> I love to work with data, FPGAs, video streams, 
+           graphical programming languages, and my buddy's table saw. </p>
+           <p>I work as an electrical engineer at a small electronic product
+            design firm in Indianapolis. We take ideas from napkin sketches 
+            to manufacturable products for everyone from tiny start-ups to 
+            massive corporations. </p>
+            <p>I live in downtown Indianapolis with my incredible wife Molly 
+            and our puppy. If you come visit us, we'll show you our favorite
+            hot sauce place. </p>
+         </div>
+      </div>
     </div>
-  </div>
-  </section>
+   </div> 
+      
+	<div id="portfolio">
+      <div class="row">
+         <div class="large-6 columns">
+            <div class="panel">
+               <a href="#"><img class="portfolio-image" src="img/sample-project-demo.jpg"></a>
+               <a href="#"><h2> live lamp</h2></a>
+               <p> a bags boards set for a wedding </p>
+            </div>
+         </div>
+         <div class="large-6 columns">
+            <div class="panel">
+            <img src="http://placehold.it/300x300&text=[things]">
+            <h2> bags </h2>
+            <p> a bags boards set for a wedding </p>
+            </div>
+         </div>
+         <div class="large-6 columns">
+            <div class="panel">
+            <img src="http://placehold.it/300x300&text=[things]">
+            <h2> bags </h2>
+            <p> a bags boards set for a wedding </p>
+            </div>
+         </div>
+         <div class="large-6 columns">
+            <div class="panel">
+            <img src="http://placehold.it/300x300&text=[things]">
+            <h2> bags </h2>
+            <p> a bags boards set for a wedding </p>
+            </div>
+         </div>
 
-  <section class="parallax-slide" id="featured-project">
-  <div class="row">
-    <div class="large-4 columns">
-      <img class="circular" src="img/sample-project-demo.jpg">
-    </div>
-    <div class= "large-8 columns about-content">
-      <h2> Live Lamp </h3>
-      <p> I think we should use data well and make wonderful things. </p>
-      <p> I love to work with data, FPGAs, video streams, 
-      graphical programming languages, and my buddy's table saw. </p>
-    </div>
-  </div>
-  </section>
-  
-  <section class="parallax-slide" id="banner-0">
-    <p> hello world </p>
-  </section>
-  
-  <section class="parallax-slide" id="featured-project">
-  <div class="row">
-    <div class="large-4 columns">
-      <img class="circular" src="img/sample-project-demo.jpg">
-    </div>
-    <div class= "large-8 columns about-content">
-      <h2> Live Lamp </h3>
-      <p> I think we should use data well and make wonderful things. </p>
-      <p> I love to work with data, FPGAs, video streams, 
-      graphical programming languages, and my buddy's table saw. </p>
-    </div>
-  </div>
-  </section>
-  
- 
-<!--Import contents from external files--> 
-  <script>
-    var link = document.querySelector('link[rel="import"]');
-    var content = link.import;
-    var el = content.querySelector('.content');
-    document.getElementById("aboutMeModal").appendChild(el.cloneNode(true));
-  </script>
+      </div>
 
 
-    <script type="text/javascript"> 
-      $(document).foundation();
-    </script> 
-    
+   </div> 
+	
+	
+	<div id="footer">
+		<div id="copyright">
+         <p><a href="https://github.com/aninternetof/profile-site" class="button small round secondary">get the source for this site and go at it </a></p>  
+         <p>Copyright 2015 Brady Hurlburt, MIT License</p>
+      </div>
+	</div> 
+		
+	
+<!----- SLIDES END --->
 
+</body>
 
-  
+<script type="text/javascript"> 
+   $(document).foundation();
+</script>
 </html>
