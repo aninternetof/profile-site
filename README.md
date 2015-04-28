@@ -1,5 +1,5 @@
 # profile-site
-Personal profile website using Zurb Foundation 5.
+Personal profile website using Zurb Foundation 5. Version 0.0.1 (i.e., I am still learning).
 
 ## Foundation
 Foundation is great. [Check out of its features.] (http://foundation.zurb.com/docs/components/kitchen_sink.html)
