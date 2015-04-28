@@ -1,6 +1,9 @@
 # profile-site
 Personal profile website using Zurb Foundation 5.
 
+## Foundation
+Foundation is great. [Check out of its features.] (http://foundation.zurb.com/docs/components/kitchen_sink.html)
+
 ## Single page parallax design
 This site is centered around a single-page design, with a banner header and full-width slides denoting sections. The background images have parallax scrolling.
 
