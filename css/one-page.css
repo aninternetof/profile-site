@@ -103,7 +103,7 @@ h3 {
 }
 
 #featured-project{
-	background: url(../img/banner-red.png) 50% 0 no-repeat fixed;
+	background: url(../img/banner_red.jpg) 50% 0 no-repeat fixed;
 	color: #fff;
 	padding: 60px 0 80px 0;	
 	background-size: cover;
@@ -116,7 +116,7 @@ h3 {
 }
 
 #footer{
-	background: url(../img/banner-blue.png) 50% 0 no-repeat fixed;
+	background: url(../img/banner_blue.jpg) 50% 0 no-repeat fixed;
 	height: 200px;
 	margin: 0 auto;
 	padding: 250px 0;
