@@ -15,9 +15,9 @@ body{
 }
 
 h1 { 
-    font-family:"Arvo";
-	font-weight:normal;
-	font-size: 55px;
+	font-family: "Open Sans";
+	font-weight:lighter;
+	font-size: 80px;
 	text-align: center;
 	color: #fff;
 	margin: 0;
@@ -25,7 +25,7 @@ h1 {
 }
 
 .subtitle {
-   font-family:"Arvo";
+	font-family: "Open Sans";
 	font-weight:normal;
 	font-size: 24px;
 	text-align: center;
@@ -35,25 +35,30 @@ h1 {
 }
 
 h2 {
-   font-family:"Arvo";
-   font-weight: normal;
-   font-size: 40px;
-   text-align: left;
-   color: #000;
-   margin: 0;
+	font-family: "Open Sans";
+	font-weight: normal;
+	font-size: 40px;
+	text-align: left;
+	color: #000;
+	margin: 0;
 	padding: 0;
 }
 
 h3 {
-   font-family: Oswald;
-   font-weight: normal;
-   font-size: 16px;
-   text-align: left;
-   margin: 5px 0;
+	font-family: "Open Sans";
+	font-weight: normal;
+	font-size: 16px;
+	text-align: left;
+	margin: 5px 0;
 	padding: 0;
 	z-index: 1;
 	position: relative;
 }
+
+p {
+   font-family: "Merriweather";
+}
+
 /*= PIECES STYLING
 --------------------------------------------------------*/
 
@@ -78,6 +83,13 @@ h3 {
 }
 .dark-background .panel{
    box-shadow:2px 2px 15px rgba(0,0,0,0.5);
+}
+
+
+.button{
+	font-family: "Open Sans";
+	font-weight:lighter;
+	font-size: 18px;
 }
 
 
@@ -124,5 +136,7 @@ h3 {
 	background-size: cover;
 }
 
-#copyright  { color: #FFF; font-family:"Wellfleet";  font-size: 14px; margin-top: 100px; text-align: center;  }
-#copyright  a { text-decoration: none; color: #555;  }
+#copyright  { color: #FFF; font-size: 14px; margin-top: 100px; text-align: center;  }
+#copyright p {
+	font-family:"Open Sans"; 
+}
