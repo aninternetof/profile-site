@@ -24,15 +24,7 @@ h1 {
 	padding: 0;
 }
 
-.subtitle {
-	font-family: "Open Sans";
-	font-weight:normal;
-	font-size: 24px;
-	text-align: center;
-	color: #fff;
-	margin: 0;
-	padding: 10px 0 50px 0;
-}
+
 
 h2 {
 	font-family: "Open Sans";
@@ -62,6 +54,26 @@ p {
 /*= PIECES STYLING
 --------------------------------------------------------*/
 
+.handwritten-center{
+   font-family: "Just Another Hand";
+   font-weight:lighter;
+   font-size: 96px;
+   text-align: center;
+   line-height: 90%;
+}
+
+.handwritten-left{
+   font-family: "Just Another Hand";
+   font-weight:lighter;
+   font-size: 96px;
+   text-align: left;
+   line-height: 90%;
+}
+
+.centered-content{
+   text-align: center;
+}
+
 .panel{
    margin:0px 0 20px 0;
    border:none;
@@ -78,19 +90,53 @@ p {
 .light-background {
 }
 
-.dark-background img{
-   box-shadow:2px 2px 15px rgba(0,0,0,0.5);
-}
 .dark-background .panel{
    box-shadow:2px 2px 15px rgba(0,0,0,0.5);
 }
 
+.item{
+	color: #fff;
+}
+
+.icon-bar{
+   icon-bar-bg: #333
+}
 
 .button{
 	font-family: "Open Sans";
 	font-weight:lighter;
 	font-size: 18px;
+   text-align: center;
 }
+
+.button.small{
+	font-family: "Open Sans";
+	font-weight:lighter;
+	font-size: 14px;
+}
+
+.social-bar a{
+   color: #D1D1D1;
+   font-size: 40px;
+   text-align: left;
+}
+
+.social-bar a:hover{
+   color: #7D81FF;
+}
+
+.read-on a{
+   color: #D1D1D1;
+   font-size: 44px;
+   text-align: center;
+}
+
+.read-on a:hover{
+   color: #FF7D8E;
+      text-align: center;
+}
+
+.masonry-brick { width: 450px; margin: 5px; float: left;  }
 
 
 /*= SLIDES STYLING
@@ -104,6 +150,15 @@ p {
 	margin: 0;
 	padding: 200px 0 260px 0;
 	background-size: cover;
+}
+
+#subtitle {
+	font-weight:normal;
+	font-size: 56px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 10px 0 50px 0;
 }
 
 #about-me{
@@ -121,6 +176,14 @@ p {
 	background-size: cover;
 }
 
+#quote{
+	background: url(../img/banner_blue.jpg) 50% 0 no-repeat fixed;
+   height: 200px;
+	color: #fff;
+	padding: 60px 0 80px 0;	
+	background-size: cover;
+}
+
 #portfolio{
 	background-color: #fff;
 	color: #333333;
@@ -128,15 +191,28 @@ p {
 }
 
 #footer{
-	background: url(../img/banner_blue.jpg) 50% 0 no-repeat fixed;
-	height: 200px;
+	background-color: #fff;
+	height: 150px;
 	margin: 0 auto;
-	padding: 250px 0;
+	padding: 50px 50px;
 	color: #fff;
 	background-size: cover;
 }
 
-#copyright  { color: #FFF; font-size: 14px; margin-top: 100px; text-align: center;  }
+#keep-reading-white a{
+	color: #fff;
+}
+
+#keep-reading-gray a{
+	color: #999;
+}
+
+#masonryContainer { width: 0 auto; }
+
+#copyright  { color: #777;  margin-top: 100px;}
+#copyright  a{ color: #777; font-size: 14px; margin-top: 100px; text-align: center; text-decoration: underline;}
 #copyright p {
 	font-family:"Open Sans"; 
+   font-size: 14px;
+   text-align: center;
 }

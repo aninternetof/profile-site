@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-       <title>an internet of ___</title>
-       <link rel="stylesheet" href="css/foundation.css" />
-       <link rel="stylesheet" href="css/one-page.css"/>
-      <script src="js/vendor/modernizr.js"></script>
-      <script src="js/vendor/jquery.js"></script> 
-      <script src="js/foundation/foundation.js"></script> 
-      <script src="js/foundation/foundation.reveal.js"></script>
-
-	   <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-	   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-	   <link href="//fonts.googleapis.com/css?family=Amatic+SC:400,700" rel='stylesheet' type='text/css'>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>an internet of ___</title>
+		<link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" href="css/one-page.css"/>
+       <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
+		<script src="js/vendor/modernizr.js"></script>
+		<script src="js/vendor/jquery.js"></script> 
+      <script src="js/vendor/masonry.pkgd.min.js"></script>
+		<script src="js/foundation/foundation.js"></script> 
+		<script src="js/foundation/foundation.reveal.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+      
+      <link href="http://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Just+Another+Hand:400,300,700" rel="stylesheet" type="text/css">
+	   
+		<link rel="shortcut icon" href="http://faviconist.com/icons/08ff4ac35f0e06eaab9975a7924b7321/favicon.ico" />
 	<script>
    
 <!----- JQUERY FOR SLIDING NAVIGATION --->   
-$(document).ready(function() {
+$(window).load(function() {
   $('a[href*=#]').each(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname
@@ -39,6 +44,13 @@ $(document).ready(function() {
 
 });
 
+$(window).load(function(){
+  $('#masonryContainer').masonry({  
+    itemSelector: '.masonry-brick',
+    columnWidth: 240
+  });  
+}); 
+
 
 </script>
 
@@ -50,16 +62,16 @@ $(document).ready(function() {
 <!----- SLIDES START --->   	
 	<div id="hero">
 		<div>
-         <h1> Hi, I'm Brady. </h1>
-         <p class="subtitle"> This is a space for creating connected things. </p>
+         <h1> Hi, I'm Brady </h1>
+         <p id=subtitle class="handwritten-center"> and this is a space for creating connected things </p>
 		</div>
       <div class="row">
          <div class="large-6 large-centered columns">
             <div class="large-6 columns">
-               <a href="#featured-project" class="button expand alert round">see the projects</a>
+               <a href="#featured-project" class="button expand alert round">projects</a>
             </div>
             <div class="large-6 columns">
-                <a href="#about-me" class="button expand round">read about me</a>
+                <a href="#about-me" class="button expand round">about me</a>
             </div>
          </div>
       </div>
@@ -68,135 +80,304 @@ $(document).ready(function() {
 	<div class="light-background" id="about-me">
    <div class="row"> 
    <div class= "large-8 columns about-content">
-      <h2>I think we should use data well and make wonderful things. </h2>
-      <p>I love to work with data, FPGAs, video streams, 
-      graphical programming languages, and my buddy's table saw. </p>
-      <div class="row">
-         <div class="large-4 columns end">
-         <a href="#" data-reveal-id="aboutMeModal" class="button success round  small">read more</a>     
-         <div id="aboutMeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-            <div class= "large-8 columns about-content">
-               <h2>about me</h2>
-               <p>I work as an electrical engineer at a small electronic product
-               design firm in Indianapolis. We take ideas from napkin sketches 
-               to manufacturable products for everyone from tiny start-ups to 
-               massive corporations. </p>
-               <p>I live in downtown Indianapolis with my incredible wife Molly 
-               and our puppy. If you come visit us, we'll show you our favorite
-               hot sauce place. </p>
-            </div>
-            <div class="large-4 columns">
-               <img src="img/us.png">
-            </div>
-            <a class="close-reveal-modal">&#215;</a>
-         </div>
+      <p class="handwritten-left">I think we should use data well and make wonderful things. </p>
+      <p>
+         I love to work with data, Linux drivers, FPGAs, video streams, 
+         graphical programming languages, and my buddy's table saw.
+      </p>      
+      <div id="aboutMeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <div class= "large-8 columns about-content">
+           <h2>about me</h2>
+           <p>I work as an electrical engineer at a small electronic product
+           design firm in Indianapolis. We take ideas from napkin sketches 
+           to manufacturable products for everyone from tiny start-ups to 
+           massive corporations. </p>
+           <p>I live in downtown Indianapolis with my incredible wife Molly 
+           and our puppy. If you come visit us, we'll show you our favorite
+           hot sauce place. </p>
         </div>
+        <div class="large-4 columns">
+           <img src="img/us.png">
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
       </div>
-      <p>I tweet about what I'm reading, what I'm building, and the most awesome stuff found on the web. If you want to learn more about my professional experience, there's options for that, too. </p>
-      <div class="row">
-        <div class="large-3 columns end">
-            <a href="https://twitter.com/aninternetof/with_replies" class="button round small">go to my Twitter</a></p> 
-        </div>
-         <div class="large-3 columns">
-         <a href="#" data-reveal-id="resumeModal" class="button round secondary small">see my resume</a>     
-         <div id="resumeModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-            <div class= "large-8 columns about-content">
-               <h2>resume</h2>
-               <p>I work as an electrical engineer at a small electronic product
-               design firm in Indianapolis. We take ideas from napkin sketches 
-               to manufacturable products for everyone from tiny start-ups to 
-               massive corporations. </p>
-               <p>I live in downtown Indianapolis with my incredible wife Molly 
-               and our puppy. If you come visit us, we'll show you our favorite
-               hot sauce place. </p>
-            </div>
-            <div class="large-4 columns">
-               <img src="img/us.png">
-            </div>
-            <a class="close-reveal-modal">&#215;</a>
-         </div>
-        </div>
-        <div class="large-3 columns end">
-          <p><a href="https://www.linkedin.com/pub/brady-hurlburt/9a/6b4/964" class="button round secondary small">go to my LinkedIn</a>     
-        </div>
-      </div>
+      <p>I tweet about what I'm reading, what I'm building, and my favorite stuff on the web.
+      If you want to learn more about my professional experience, there's options for that, too. </p>
    </div>
    <div class="large-4 columns">
       <img class="circular" src="img/me.png">
    </div>
+   </div>
+   <div class="row">
+       <ul class="button-group round expand">
+         <li><a href="#" data-reveal-id="aboutMeModal" class="button small success">read more</a></li>
+         <li><a href="mailto:brady@aninternetof.us" class="button small alert">email me</a></li>
+         <li><a href="https://twitter.com/aninternetof/with_replies" class="button small">go to Twitter</a></li>
+         <li><a href="/files/Hurlburt_Resume_Web.pdf" class="button small success">download resume</a> </li>
+         <li><a href="https://www.linkedin.com/pub/brady-hurlburt/9a/6b4/964" class="button small info">go to LinkedIn</a></li>
+      </ul>
+       <p class="social-bar">
+         <a href="https://twitter.com/aninternetof/with_replies""><i class="fi-social-twitter"></i></a>      
+         <a href="https://github.com/aninternetof"><i class="fi-social-github"></i></a>
+         <a href="https://plus.google.com/+BradyHurlburt/about"><i class="fi-social-google-plus"></i></a>
+         <a href="https://instagram.com/bradyhurlburt/"><i class="fi-social-instagram"></i></a>
+         <a href="https://www.facebook.com/brady.l.h"><i class="fi-social-facebook"></i></a>
+         <a href="https://www.linkedin.com/pub/brady-hurlburt/9a/6b4/964""><i class="fi-social-linkedin"></i></a>
+      </p>
+   </div>
+   <div class="row">
+   <div class="large-12 text-center columns"
+      <p id="keep-reading-gray"><a href="#featured-project"> <i class="fi-arrow-down"></i> check out the projects below  <i class="fi-arrow-down"></i></a> </p>
+   </div>
+   </div>
    </div> 
-   </div> 
-	
-	
+		
    <div class= "dark-background" id="featured-project">
     <div class="row">
-      <div class="large-6 columns">
-        <img class="circular" src="img/sample-project-demo.jpg">
+      <div class="large-5 columns">
+         <p><a href="http://buildinprogress.media.mit.edu/projects/2225/steps"><img id="featured-scroll-spot" src="img/livelamp_0.png"></a></p>
+         <p class="handwritten-center"> featured work in progress </p>
       </div>
-      <div class= "large-6 columns about-content">
+      <div class= "large-7 columns about-content">
          <div class="panel">
            <h2> Live Lamp </h3>
-           <p> I think we should use data well and make wonderful things. </p>
-           <p> I love to work with data, FPGAs, video streams, 
-           graphical programming languages, and my buddy's table saw. </p>
-           <p>I work as an electrical engineer at a small electronic product
-            design firm in Indianapolis. We take ideas from napkin sketches 
-            to manufacturable products for everyone from tiny start-ups to 
-            massive corporations. </p>
-            <p>I live in downtown Indianapolis with my incredible wife Molly 
-            and our puppy. If you come visit us, we'll show you our favorite
-            hot sauce place. </p>
+           <p> How could we display live data in way that is meaningless to the uninitiated, but 
+           immediately accessible to those who are in-the-know?</p>
+           <p>How about a lamp? A color-changing lamp. Lamps are everywhere. 
+           </p>
+           <p> The changes in color would seem decorative to most, but could clearly relay critical information to 
+           those looking for it. 
+           </p>
+           <p>
+           Who would need this? How about a student and a teacher in a classroom? Students with
+           emotional disorders often develop secret signals that allow the student to inform the teacher that she is
+           getting stressed and might not be able to handle it. What if the lamp were connected to the student's FitBit,
+           and communicated the sudden rise in her heart rate before she even realized it herself?
+           </p>
+           <p> I'm working on a web-connected RGB lamp to use for this purpose. It uses a BeagleBone Black, which is fun. There will
+           be a full write-up here, but for now you can track my progress on MIT's awesome site BuildInProgress.
+           </p>
+
+         </div>
+         <div class="centered-content">
+              <p><a href="http://buildinprogress.media.mit.edu/projects/2225/steps" class="button round">check it out on BuildInProgress</a></p>
+              <p id="keep-reading-white"><a href="#portfolio"> <i class="fi-arrow-down"></i> or keep going down for more projects <i class="fi-arrow-down"></i></a> </p>
+         </div>
+   
+      </div>
+    </div>
+
+   </div>   
+   
+   <!-- Masonry Container -->
+<div class="row" id="portfolio">
+  <p class="handwritten-center"> project archive </p>
+  <div class="large-12 columns">
+    <div id="masonryContainer">
+      <div class="masonry-brick">
+         <div class="panel">
+            <a href="#" data-reveal-id="netcarModal"><img class="portfolio-image" src="img/netcar_0.jpg"></a>
+            <a href="#" data-reveal-id="netcarModal"><h2> Netcar</h2></a>
+            <p> A web-controlled Raspberry Pi car. </p>
+         </div>
+      </div>
+      <div class="masonry-brick">
+         <div class="panel">
+            <a href="#" data-reveal-id="bagsModal"><img class="portfolio-image" src="img/bags_4.jpg"></a>
+            <a href="#" data-reveal-id="bagsModal"><h2> Bags</h2></a>
+            <p> A bags boards set for a wedding. My wedding. </p>
+         </div>
+      </div>
+      <div class="masonry-brick">
+         <div class="panel">
+            <a href="#" data-reveal-id="ringModal"><img class="portfolio-image" src="img/ring_20.jpg"></a>
+            <a href="#" data-reveal-id="ringModal"><h2> Ring </h2></a>
+            <p> Work with J. West Designs to create an engagement ring. </p>
+         </div>
+      </div>
+      <div class="masonry-brick">
+         <div class="panel">
+            <a href="#" data-reveal-id="upinarmsModal"><img class="portfolio-image" src="img/upinarms_0.jpg"></a>
+            <a href="#" data-reveal-id="upinarmsModal"><h2> <i>Up In Arms</i> </h2></a>
+            <p> A collection of songs written and recorded in 2012 and 2013. </p>
          </div>
       </div>
     </div>
-   </div> 
-      
-	<div id="portfolio">
-      <div class="row">
-         <div class="large-6 columns">
-            <div class="panel">
-               <a href="#"><img class="portfolio-image" src="img/sample-project-demo.jpg"></a>
-               <a href="#"><h2> Live Lamp</h2></a>
-               <p> a bags boards set for a wedding </p>
-            </div>
-         </div>
-         <div class="large-6 columns">
-            <div class="panel">
-            <img src="http://placehold.it/300x300&text=[things]">
-            <h2> Bags </h2>
-            <p> a bags boards set for a wedding </p>
-            </div>
-         </div>
-         <div class="large-6 columns">
-            <div class="panel">
-            <img src="http://placehold.it/300x300&text=[things]">
-            <h2> Bags </h2>
-            <p> a bags boards set for a wedding </p>
-            </div>
-         </div>
-         <div class="large-6 columns">
-            <div class="panel">
-            <img src="http://placehold.it/300x300&text=[things]">
-            <h2> Bags </h2>
-            <p> a bags boards set for a wedding </p>
-            </div>
-         </div>
+  </div>
+</div>
 
-      </div>
-
-
-   </div> 
+   
+   
+   
+   
 	
 	
 	<div id="footer">
 		<div id="copyright">
-         <p><a href="https://github.com/aninternetof/profile-site" class="button small round secondary">get the source for this site and go at it </a></p>  
-         <p>Copyright 2015, Brady Hurlburt</p>
+         <p>The good photography is copyright 2014 <a href="http://www.katemillerphotography.com/">Kate Miller Photography</a><p>
+         <p>The website is copyright 2015 <a href="#about-me">Brady Hurlburt</a></p>
+         <p><a href="https://github.com/aninternetof/profile-site" >Click here to get the source for this site and go at it.</a></p>  
       </div>
 	</div> 
 		
 	
 <!----- SLIDES END --->
+
+<!----- MODALS --->
+<!-- BAGS --->
+      <div id="bagsModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <div class= "large-12 columns about-content">
+           <h2>Bags</h2>
+           <p>My dad made us a set of bags boards as an awesome wedding present. Our job was to paint them! </p>
+           <p>To help us match the angles, we set the boards next to each other and used single continuous mask
+            strips. This made for a cool result when the finished boards are sitting side-by-side.</p>
+           <img src="img/bags_0.jpg">
+           <img src="img/bags_1.jpg">
+           <img src="img/bags_2.jpg">
+           <img src="img/bags_3.jpg">
+           <img src="img/bags_4.jpg">
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+      </div>
+      
+<!-- UP IN ARMS --->
+      <div id="upinarmsModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <div class= "large-12 columns about-content">
+           <h2><i>Up In Arms</i></h2>
+           <p>I wrote these songs in 2012 and 2013, so they cover a lot. In the first part, I had moved from college in Arkansas to teaching in Indiana.
+           In the second part, I had just started dating this girl named Molly. 
+           </p>
+           <iframe width="100%" height="400" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/94720519&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+      </div>
+      
+<!-- NETCAR --->
+      <div id="netcarModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <div class= "large-12 columns about-content">
+           <h2>Netcar</h2>
+           <p>Walgreens has the best RC car. For like $15 you can get the <a ahref="http://www.walgreens.com/store/c/thunder-tumbler-radio-control-360-degree-rally-car/ID=prod6090850-product">
+           Thunder Tumbler </a> (or whatever they may have renamed it to this year). Is it fun to use as an RC car? I have no idea. It's awesome because of
+           <a href="http://www.instructables.com/id/Robot-Platform-including-h-bridges-from-10-RC-Ca/"> how easy it is to hack (see this tutorial) </a>.
+           Seriously, the hardest parts of making an RC car are making the stupid H-bridges and figuring out a nice chassis. With the Thunder Tumbler, both are done!
+           You really just touch the right pad with 5V, and watch the wheel spin.
+           </p>
+           <p>
+           If you're lucky, you'll end up with one of the old models that has through-hole parts; otherwise, you'll have to be careful not to rip off the pads
+           when you remove the surface-mount IC.
+           </p>
+           <p>
+           I hooked up a Raspberry Pi to it and wrote a simple PWM motor controller, then my brother wrote a simple HTTP interface to it. Then he wrote a PyGame app
+           for the PC to drive it with. All this code is available on my <a href="https://github.com/aninternetof/net-car">GitHub</a>.
+           </p>
+           <p>
+           My friend worked at the Microsoft store, so he 3D-printed the cool blue case for me.
+           </p>
+           <img src="img/netcar_0.jpg">
+           <img src="img/netcar_1.jpg">
+           <img src="img/netcar_2.jpg">
+
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+      </div>
+      
+<!-- RING --->
+<div id="ringModal" class="reveal-modal xlarge" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <div class= "large-12 columns about-content">
+      <h2>Ring</h2>
+      <p>Molly always used to wear a Celtic-braid ring that her dad gave her. If I expected her to put on mine instead, I needed a worthy replacement. </p>
+      <p>After going to a couple different jewellery shops who didn't seem to understand the word <i>custom</i>, I 
+      found <a href="http://www.jwestjewelrydesigns.com/"> J. West Designs</a>. He and I went back and forth on the design
+      a dozen times and burned through two wax models until I earned the title "Most Particular Customer" and he created a 
+      gorgeous ring.
+      </p>
+      <p> I have the only wax model, so don't think you'll get yourself one! </p>
+      <img src="img/ring_18.jpg">
+      <p> It took me about an hour of playing with my grapher and studying the photo of her old one to figure out
+      that there are four strands, not three.</p>
+      <img src="img/ring_19.jpg">
+      <p> There are lots of options for how the strands could come up to hold the diamond. We ended up doing option A. The other two strands keep going
+      and cross underneath the diamond. </p>
+      <img src="img/ring_17.jpg">
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_14.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_3.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_0.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_1.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_4.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_5.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_6.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_7.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_8.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_9.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_10.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_11.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_12.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_13.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_2.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_16.jpg">
+         </div>
+      </div>
+      <div class="row">
+         <div class="large-6 columns">
+             <img src="img/ring_15.jpg">
+         </div>
+         <div class="large-6 columns">
+            <img src="img/ring_20.jpg">
+         </div>
+      </div>
+                                    
+
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<!----- MODALS END --->
 
 </body>
 
